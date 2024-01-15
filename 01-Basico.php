@@ -6,11 +6,14 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>01-Basico.php</title>
+  <title>01-Basico.php</title> 
  </head>
- <body>
+ <body> 
+
 <h1> Bienvenido a mi página en php </h1>
 <?php
+
+// http://localhost/PHP_Aplicaiones_WEB/ -> Ruta de la página web en el servidor local
 // Comentario de una línea
 /* Comentario de varias líneas
 */
