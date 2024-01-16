@@ -16,9 +16,9 @@
     <br><br>
     <?php
         $usuario = $_POST['usu'];
-        $contraseña = $_POST['cla'];
-        echo "El usuario es $usuario y la contraseña es $contraseña <br>";
+        $clave = $_POST['cla'];
+        echo "El usuario es $usuario y la contraseña es $clave <br>";
         echo "<a href='02-EnvioParametrosForm.php'>Volver</a>";
     ?>
-</body>
+</body> 
 </html>
