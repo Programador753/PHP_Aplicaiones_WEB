@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <?php
+    // conectamos con la base de datos
+    include("conexion.php");
+    ?>
     <form action="addLibros.php" method="post">
         <table align="center" width="80%">
             <tr>
@@ -27,8 +31,17 @@
                 <td>Módulo</td>
                 <td>
                     <select name="f_idmodulo" id="f_idmodulo">
-                    <option value="1">Ingles
-                    <option value="2">Aplicaciones Web
+                    <option value="">
+                    <?php
+                    // Recuperamos los datos de la tabla modulo
+                    $sql="SELECT * FROM modulos";
+                    // Ejecutamos la sentencia de sql
+                    $registros=mysqli_query($conexion,$sql) or die("Problemas en la consulta");
+                    while($line=mysqli_fetch_array($registros)) // Mientras haya datos en la tabla los mostramos, en este caso los guardamos en un array para poder mostrarlos en el select
+                    {
+                        echo "<option value='$line[idmodulo]'>$line[modulo]";
+                    }
+                    ?>
                     </select>
                 </td>
             </tr>
@@ -36,9 +49,17 @@
                 <td>Editorial</td>
                 <td>
                     <select name="f_editorial" id="f_editorial">
-                        <option value="1">Paraninfo
-                        <option value="2">MacGrawHill
-                        <option value="3">Santillana
+                        <option value="">
+                                <?php
+                                // Recuperamos los datos de la tabla editorial
+                                $sql="SELECT * FROM editorial";
+                                // Ejecutamos la sentencia de sql
+                                $registros=mysqli_query($conexion,$sql) or die("Problemas en la consulta");
+                                while($line=mysqli_fetch_array($registros)) // Mientras haya datos en la tabla los mostramos, en este caso los guardamos en un array para poder mostrarlos en el select
+                                {
+                                    echo "<option value='$line[ideditorial]'>$line[editorial]";
+                                }
+                                ?>
                     </select> 
                 </td>
             </tr>
@@ -47,13 +68,22 @@
                 <td>
                     <select name="f_idusuario" id="f_idusuario" required>
                         <option value="">
-                        <option value="Antonio">Antonio
+                                <?php
+                                // Recuperamos los datos de la tabla usuario
+                                $sql="SELECT * FROM usuarios";
+                                // Ejecutamos la sentencia de sql
+                                $registros=mysqli_query($conexion,$sql) or die("Problemas en la consulta");
+                                while($line=mysqli_fetch_array($registros)) // Mientras haya datos en la tabla los mostramos, en este caso los guardamos en un array para poder mostrarlos en el select
+                                {
+                                    echo "<option value='$line[idusuario]'>$line[idusuario]";
+                                }
+                                ?>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>Precio</td>
-                <td><input type="number" name="f_precio" id="f_precio"></td>
+                <td><input type="number" step="0.01" name="f_precio" id="f_precio"></td>
             </tr>
             <tr>
                 <td>Vendido</td>
