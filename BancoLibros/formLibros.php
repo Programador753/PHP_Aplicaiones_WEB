@@ -26,9 +26,9 @@
             <tr>
                 <td>Módulo</td>
                 <td>
-                    <select name="f_idmodulo" id="f_idmodulo"></select>
-                    <option value="1">Ingles</option>
-                    <option value="2">Aplicaciones Web</option>
+                    <select name="f_idmodulo" id="f_idmodulo">
+                    <option value="1">Ingles
+                    <option value="2">Aplicaciones Web
                     </select>
                 </td>
             </tr>
@@ -36,9 +36,9 @@
                 <td>Editorial</td>
                 <td>
                     <select name="f_editorial" id="f_editorial">
-                        <option value="1">Paraninfo</option>
-                        <option value="2">MacGrawHill</option>
-                        <option value="3">Santillana</option>
+                        <option value="1">Paraninfo
+                        <option value="2">MacGrawHill
+                        <option value="3">Santillana
                     </select> 
                 </td>
             </tr>
@@ -46,8 +46,8 @@
                 <td>Usuario</td>
                 <td>
                     <select name="f_idusuario" id="f_idusuario" required>
-                        <option value=""></option>
-                        <option value="Antonio">Antonio</option>
+                        <option value="">
+                        <option value="Antonio">Antonio
                     </select>
                 </td>
             </tr>
@@ -58,9 +58,10 @@
             <tr>
                 <td>Vendido</td>
                 <td>
-                    <select name="f_vendido" id="f_vendido"></select>
-                    <option value="0">No</option>
-                    <option value="1">Si</option>
+                    <select name="f_vendido" id="f_vendido">
+                    <option value="0">No
+                    <option value="1">Si
+                    </select>
                 </td>
             </tr>
             <tr>
