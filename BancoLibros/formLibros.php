@@ -11,6 +11,7 @@
 
 <body>
     <?php
+    /* Siempre que se ejecute una consulta a base de datos tenemos que tener un contenedor donde gurdar esos datos de la consulta*/
     // conectamos con la base de datos
     include("conexion.php");
     ?>
