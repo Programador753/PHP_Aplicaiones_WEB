@@ -35,12 +35,12 @@
                         <option value="">
                                 <?php
                                 // Recuperamos los datos de la tabla modulo
-                                $sql="SELECT * FROM modulos";
+                                $sql="SELECT * FROM modulos, ciclos WHERE modulos.idciclo=ciclos.idciclo";
                                 // Ejecutamos la sentencia de sql
                                 $registros=mysqli_query($conexion,$sql) or die("Problemas en la consulta");
                                 while($line=mysqli_fetch_array($registros)) // Mientras haya datos en la tabla los mostramos, en este caso los guardamos en un array para poder mostrarlos en el select
                                 {
-                                    echo "<option value='$line[idmodulo]'>$line[modulo]";
+                                    echo "<option value='$line[idmodulo]'>$line[modulo] ($line[ciclo])";
                                 }
                                 ?>
                     </select>
@@ -94,10 +94,6 @@
                     <option value="1">Si
                     </select>
                 </td>
-            </tr>
-            <tr>
-                <td>Fecha Alta</td>
-                <td><input type="date" name="f_fechaalta" id="f_fechaalta"></td>
             </tr>
             <tr>
                 <td>Comentarios</td>
