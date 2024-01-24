@@ -31,17 +31,17 @@
                 <td>Módulo</td>
                 <td>
                     <select name="f_idmodulo" id="f_idmodulo">
-                    <option value="">
-                    <?php
-                    // Recuperamos los datos de la tabla modulo
-                    $sql="SELECT * FROM modulos";
-                    // Ejecutamos la sentencia de sql
-                    $registros=mysqli_query($conexion,$sql) or die("Problemas en la consulta");
-                    while($line=mysqli_fetch_array($registros)) // Mientras haya datos en la tabla los mostramos, en este caso los guardamos en un array para poder mostrarlos en el select
-                    {
-                        echo "<option value='$line[idmodulo]'>$line[modulo]";
-                    }
-                    ?>
+                        <option value="">
+                                <?php
+                                // Recuperamos los datos de la tabla modulo
+                                $sql="SELECT * FROM modulos";
+                                // Ejecutamos la sentencia de sql
+                                $registros=mysqli_query($conexion,$sql) or die("Problemas en la consulta");
+                                while($line=mysqli_fetch_array($registros)) // Mientras haya datos en la tabla los mostramos, en este caso los guardamos en un array para poder mostrarlos en el select
+                                {
+                                    echo "<option value='$line[idmodulo]'>$line[modulo]";
+                                }
+                                ?>
                     </select>
                 </td>
             </tr>
