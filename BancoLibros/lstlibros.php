@@ -6,7 +6,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>formLibros.php</title>
+    <title>lstlibros.php</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     // conectamos con la base de datos
     include("conexion.php");
     ?>
-    <table border="1" align="center" width="100%">
+    <table border="1" align="center" width="100%" cellspacing="2">
         <tr>
             <td colspan="9" align="center"><h2>Listado de libros</h2></td>
         </tr>
@@ -27,7 +27,7 @@
             <td><h3>Precio</h3></td>
             <td><h3>Vendido</h3></td>
             <td><h3>Fecha de alta</h3></td>
-            <td><h3>Comentarios</h3></td>
+            <td><h3>Comentarios</h3></td> 
         </tr>
     <?php
         // Recuperamos los datos de la tabla libros y los mostramos en una tabla
@@ -45,7 +45,7 @@
             echo "<td align='justify'><strong>$line[nombrecompleto]</strong></td>"; // Mostramos el usuario que ha añadido el libro en una celda de la tabla con negrita y centrado en la celda
             echo "<td align='justify'><strong>$line[precio]€</strong></td>"; // Mostramos el precio del libro en una celda de la tabla con negrita y centrado en la celda
             { 
-                echo "<td align='justify'><strong>"; // Abrimos celda
+                echo "<td align='center'><strong>"; // Abrimos celda
                     if ($line['vendido'] == 1) // Si el valor de la columna vendido es 1 mostramos SI en negrita y centrado en la celda
                     {
                         echo 'SI';
