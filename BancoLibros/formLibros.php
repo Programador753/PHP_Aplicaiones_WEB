@@ -103,9 +103,9 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="submit" value="Enviar">
-                    <br><br>
-                    <a href="lstlibros.php"><input type="button" value="Lista de Libros "></a>
+                    <input type="submit" value="Enviar"> 
+                    <a href="lstlibros.php"><input type="button" value="Lista de Libros "></a> 
+                    <a href="formEditoriales.php"><input type="button" value="Formulario Editoriales"></a>
                 </td>
             </tr>
         </table>
