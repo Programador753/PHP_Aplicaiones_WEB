@@ -16,7 +16,7 @@
     ?>
     <table border="1" align="center" width="100%" cellspacing="2">
         <tr>
-            <td colspan="10" align="center"><h2>Listado de libros</h2></td>
+            <td colspan="11" align="center"><h2>Listado de libros</h2></td>
         </tr>
         <tr>
             <td><h3>Id</h3></td>
@@ -28,11 +28,12 @@
             <td><h3>Precio</h3></td>
             <td><h3>Vendido</h3></td>
             <td><h3>Fecha de alta</h3></td>
-            <td><h3>Comentarios</h3></td> 
+            <td><h3>Comentarios</h3></td>
+            <td></td> 
         </tr>
     <?php
         // Recuperamos los datos de la tabla libros y los mostramos en una tabla
-        $sql="SELECT * FROM libros, modulos, editorial, usuarios WHERE libros.idmodulo=modulos.idmodulo AND libros.ideditorial=editorial.ideditorial AND libros.idusuario=usuarios.idusuario ";
+        $sql="SELECT * FROM libros, modulos, editorial, usuarios WHERE libros.idmodulo=modulos.idmodulo AND libros.ideditorial=editorial.ideditorial AND libros.idusuario=usuarios.idusuario ORDER BY libros.idlibro ";
         // Ejecutamos la sentencia de sql
         $registros=mysqli_query($conexion,$sql) or die("Problemas en la consulta");
         // Mientras haya datos en la tabla los mostramos en la página web en una tabla
@@ -60,12 +61,12 @@
             } 
             echo "<td align='justify'><strong>$line[fechaAlta]</strong></td>"; // Mostramos la fecha de alta del libro en una celda de la tabla con negrita y centrado en la celda
             echo "<td align='justify'><strong>$line[comentarios]</strong></td>"; // Mostramos los comentarios del libro en una celda de la tabla con negrita y centrado en la celda
+            echo "<td align='center'><a href='delLibros.php?codigo=$line[idlibro]'><img src='./Imagenes/basura.png' width='30' height='30'></a></td>"; // Creamos un botón para borrar el libro de la tabla y le pasamos el id del libro a borrar mediante string con el método GET
             echo "</tr>"; // Cerramos fila
         }
-        
     ?>
     <tr> <!-- Abrimos fila --> 
-        <td colspan="10" align="center"><a href='formLibros.php' align="center"><input type='button' value='Volver al formulario para añadir libros'></a></td> <!-- Creamos un botón para volver al formulario de añadir libros -->
+        <td colspan="11" align="center"><a href='formLibros.php' align="center"><input type='button' value='Volver al formulario para añadir libros'></a></td> <!-- Creamos un botón para volver al formulario de añadir libros -->
     </tr> <!-- Cerramos fila -->
     </table> <!-- Cerramos tabla -->
 </body>
