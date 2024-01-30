@@ -16,9 +16,10 @@
     ?>
     <table border="1" align="center" width="100%" cellspacing="2">
         <tr>
-            <td colspan="9" align="center"><h2>Listado de libros</h2></td>
+            <td colspan="10" align="center"><h2>Listado de libros</h2></td>
         </tr>
         <tr>
+            <td><h3>Id</h3></td>
             <td><h3>ISBN</h3></td>
             <td><h3>Titulo</h3></td>
             <td><h3>Módulo</h3></td>
@@ -38,6 +39,7 @@
         while($line=mysqli_fetch_array($registros))  
         {
             echo "<tr align='center'>"; // Abrimos fila
+            echo "<td align='justify'><strong>$line[idlibro]</strong></td>"; // Mostramos el id del libro en una celda de la tabla con negrita y centrado en la celda
             echo "<td align='justify'><strong>$line[isbn]</strong></td>"; // Mostramos el isbn del libro en una celda de la tabla con negrita y centrado en la celda 
             echo "<td align='justify'><strong>$line[titulo]</strong></td>"; // Mostramos el titulo del libro en una celda de la tabla con negrita y centrado en la celda
             echo "<td align='justify'><strong>$line[modulo]</strong></td>"; // Mostramos el modulo al que pertenece el libro en una celda de la tabla con negrita y centrado en la celda
@@ -63,7 +65,7 @@
         
     ?>
     <tr> <!-- Abrimos fila --> 
-        <td colspan="9" align="center"><a href='formLibros.php' align="center"><input type='button' value='Volver al formulario para añadir libros'></a></td> <!-- Creamos un botón para volver al formulario de añadir libros -->
+        <td colspan="10" align="center"><a href='formLibros.php' align="center"><input type='button' value='Volver al formulario para añadir libros'></a></td> <!-- Creamos un botón para volver al formulario de añadir libros -->
     </tr> <!-- Cerramos fila -->
     </table> <!-- Cerramos tabla -->
 </body>
