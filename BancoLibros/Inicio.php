@@ -22,7 +22,7 @@
             <tr>
                 <td colspan="2" align="center">
                     <input type="submit" value="Acceder"> <!-- Se crea un botón para enviar el formulario -->
-                    <input type="button" value="Registrar" onclick="window.open('formUsuarios.php','_parent'">
+                    <input type="button" value="Registrar" onclick="window.open('formUsuarios.php','_parent')">
                 </td>
             </tr>
         </table>
