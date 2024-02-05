@@ -11,6 +11,8 @@
 
 <body>
     <?php
+    // Iniciamos el uso de variables de sesión
+    session_start();
     /* Siempre que se ejecute una consulta a base de datos tenemos que tener un contenedor donde gurdar esos datos de la consulta*/
     // conectamos con la base de datos
     include("conexion.php");
@@ -18,7 +20,16 @@
     <form action="addLibros.php" method="post">
         <table align="center" width="80%">
             <tr>
-                <td colspan="2"><h2>Banco de Libros</h2></td>
+                <td colspan="2" align="center"><h2>Banco de Libros</h2></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    Usuario: 
+                        <?php
+                        // Mostramos el nombre de usuario identificado en la variable de sesión usuario
+                        echo $_SESSION['usuario'];
+                        ?>
+                </td>
             </tr>
             <tr>
                 <td>ISBN</td>
@@ -64,24 +75,7 @@
                     </select> 
                 </td>
             </tr>
-            <tr>
-                <td>Usuario</td>
-                <td>
-                    <select name="f_idusuario" id="f_idusuario" required>
-                        <option value="">
-                                <?php
-                                // Recuperamos los datos de la tabla usuario
-                                $sql="SELECT * FROM usuarios";
-                                // Ejecutamos la sentencia de sql
-                                $registros=mysqli_query($conexion,$sql) or die("Problemas en la consulta");
-                                while($line=mysqli_fetch_array($registros)) // Mientras haya datos en la tabla los mostramos, en este caso los guardamos en un array para poder mostrarlos en el select
-                                {
-                                    echo "<option value='$line[idusuario]'>$line[idusuario]";
-                                }
-                                ?>
-                    </select>
-                </td>
-            </tr>
+           
             <tr>
                 <td>Precio</td>
                 <td><input type="number" step="0.01" name="f_precio" id="f_precio"></td>
