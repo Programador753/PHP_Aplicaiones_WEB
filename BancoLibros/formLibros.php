@@ -32,6 +32,10 @@
                 </td>
             </tr>
             <tr>
+                <td colspan="2" align="right">
+                <a href="logout.php"><input type="button" value="Cerrar Sesión"></a>
+                </td>
+            <tr>
                 <td>ISBN</td>
                 <td><input type="text" name="f_isbn" id="f_isbn" maxlength="17"></td>
             </tr>
