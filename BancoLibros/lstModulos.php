@@ -15,7 +15,7 @@
     ?>
     <table border="1" align="center" width="100%" cellspacing="2">
         <tr>
-            <td colspan="2" align="center"><h2>Formulario de alta de modulos</h2></td>
+            <td colspan="4" align="center"><h2>Formulario de alta de modulos</h2></td>
         </tr>
         <tr>
             <td><h3>Id</h3></td>
