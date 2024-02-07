@@ -22,6 +22,8 @@
                 <td colspan="2" align="center"> <!-- Celda para el botón de enviar y volver al formulario de libros -->
                     <input type="submit" value="Enviar"> <!-- Botón de enviar -->
                     <a href="formLibros.php"><input type="button" value="Volver al formulario libros"></a> <!-- Botón de volver al formulario de libros -->
+                    <a href="lstEditoriales.php"><input type="button" value="Listado de editoriales"></a> <!-- Botón de ir al listado de editoriales -->
+                    <a href="menu.php"><input type="button" value="Menú principal"></a> <!-- Botón de ir al menú principal -->
                 </td>
             </tr>
         </table>
