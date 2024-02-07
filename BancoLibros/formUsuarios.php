@@ -43,6 +43,7 @@
                 <td colspan="2" align="center"> <!-- Celda para el botón de enviar y volver al inicio -->
                     <input type="submit" value="Enviar"> <!-- Botón de enviar -->
                     <a href="Inicio.php"><input type="button" value="Volver al inicio"></a> <!-- Botón de volver al inicio -->
+                    <a href="lstUsuarios.php"><input type="button" value="Listado de usuarios"></a> <!-- Botón de ir al listado de usuarios -->
                 </td>
         </table>  
     </form>

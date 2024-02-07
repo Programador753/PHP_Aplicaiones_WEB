@@ -6,9 +6,9 @@ include("conexion.php");
     $nombrecompleto = $_POST['f_nombrecompleto'];
     $email = $_POST['f_email'];
     $movil = $_POST['f_movil'];
-    $clave = $_POST['f_clave'];
+    $clave1 = $_POST['f_clave'];
 // Encriptamos la clave
-    $clave = password_hash($clave, PASSWORD_DEFAULT); 
+    $clave = md5($clave1);
 // Consulta a la base de datos
     $sql = "INSERT INTO usuarios (idusuario, nombrecompleto, email, movil, clave) VALUES ('$idusuario', '$nombrecompleto', '$email', '$movil', '$clave')";
 // Ejecutamos la consulta
