@@ -15,12 +15,12 @@
     ?>
     <table border="1" align="center" width="100%" cellspacing="2">
         <tr>
-            <td colspan="2" align="center"><h2>Formulario de alta de ciclos</h2></td>
+            <td colspan="3" align="center"><h2>Formulario de alta de ciclos</h2></td>
         </tr>
         <tr>
-            <td><h3>Id</h3></td>
-            <td><h3>Ciclo</h3></td>
-            <td></td>
+            <td align="center"><h3>Id</h3></td>
+            <td align="center"><h3>Ciclo</h3></td>
+            <td align="center"><h3>Eliminar</h3></td>
         </tr>
     <?php
         // Recuperamos los datos de la tabla ciclos y los mostramos en una tabla
@@ -36,7 +36,14 @@
             echo "<td align='center'><a href='delCiclos.php?codigo=$line[idciclo]'><img src='./Imagenes/basura.png' width='30' height='30'></a></td>"; // Mostramos un enlace para eliminar el ciclo
             echo "</tr>"; // Cerramos fila
         }
+        // Boton para volver a la pagina principal
+       
 
     ?>
+    <td colspan="3" align="center">
+        <a href="menu.php"><input type="button" value="Volver al menú"></a>
+    </td>
+    </table>
+
 </body>
 </html>
