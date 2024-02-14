@@ -15,12 +15,12 @@
     ?>
     <table border="1" align="center" width="100%" cellspacing="2">
         <tr>
-            <td colspan="2" align="center"><h2>Formulario de alta de editoriales</h2></td>
+            <td colspan="3" align="center"><h2>Formulario de alta de editoriales</h2></td>
         </tr>
         <tr>
-            <td><h3>Id</h3></td>
-            <td><h3>Editorial</h3></td>
-            <td></td>
+            <td align="center"><h3>Id</h3></td>
+            <td align="center"><h3>Editorial</h3></td>
+            <td align="center"><h3>Eliminar</h3></td>
         </tr>
     <?php
         // Recuperamos los datos de la tabla editoriales y los mostramos en una tabla
@@ -38,5 +38,9 @@
         }
 
     ?>
+    <td colspan="3" align="center">
+        <a href="menu.php"><input type="button" value="Volver al menú"></a>
+    </td>
+    </table>
 </body>
 </html>

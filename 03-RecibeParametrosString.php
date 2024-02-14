@@ -14,7 +14,7 @@
     ?>
     <br><br>
     <?php
-        echo "El usuario es: ".$_GET['usuario']."<br>";
+        echo "El usuario es: ".$_GET['usuario']."<br>"; // Se recoge la infoprmacion del campo de texto recibida por el formulario mediante el metodo GET y se guarda en la variable $usuario
         echo "El curso es: ".$_GET['curso']."<br>";
         echo "La clase es: ".$_GET['clase']."<br>";
         echo "<a href='03-EnvioParametrosString.php'>Volver</a>";
